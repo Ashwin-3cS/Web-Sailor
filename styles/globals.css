@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: "Montserrat" , sans-serif;
+}
+
+.white{
+    color: aliceblue;
+}
+
+.gradient{
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+    min-height: 100vh;  
+    display: flex;
+    flex-direction: column;  
+}
+
+/* Navbar Component */
+.logo_text {
+    @apply max-sm:hidden font-satoshi font-semibold text-lg text-black tracking-wide;
+  } 
+  
