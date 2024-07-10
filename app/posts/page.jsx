@@ -2,7 +2,7 @@ import React from 'react'
 
 const FetchPosts = () => {
   return (
-    <div>FetchPosts</div>
+    <div>FetchPostsAll - Based on categories</div>
   )
 }
 

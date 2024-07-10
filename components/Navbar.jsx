@@ -33,15 +33,23 @@ const Navbar = () => {
                 </div>
             </Link>
             <ul className='font-medium white text-xl'>
-                <li className='inline-block pt-0 pl-[20px] pr-[20px]'>
+                {/* <li className='inline-block pt-0 pl-[20px] pr-[20px]'>
                     <Link href="/posts">Sail</Link>
-                </li>
-                {/* <li className='inline-block pt-0 pl-[20px] pr-[20px]'>
-                    <Link href="#">Dummy</Link>
                 </li> */}
                 {/* <li className='inline-block pt-0 pl-[20px] pr-[20px]'>
                     <Link href="#">Dummy</Link>
                 </li> */}
+                {/* <li className='inline-block pt-0 pl-[20px] pr-[20px]'>
+                    <Link href="#">Dummy</Link>
+                </li> */}
+
+                <div className="dropdown dropdown-bottom dropdown-end mr-4">
+                  <div tabIndex={0} role="button" className=" m-1">Sail</div>
+                  <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-64  p-2 shadow">
+                    <li><a>Blockchain</a></li>
+                    <li><a>Artificial Intelligence</a></li>
+                  </ul>
+                </div>
                 {session?.user ?(
                     <>
                         <Link href='/create-post'>
@@ -53,6 +61,16 @@ const Navbar = () => {
                         >
                             SignOut
                         </button>
+                        <Link href='/profile'>
+                            <Image
+                                src={session?.user.image}
+                                width={45}
+                                height={30}
+                                alt='profile-image'
+                                className='inline-block rounded-badge border-solid ml-1' 
+                            
+                            />
+                        </Link>
                     </>
 
                 ):(
