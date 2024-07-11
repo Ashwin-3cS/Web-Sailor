@@ -16,14 +16,27 @@
     
     background: #20002c;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #cbb4d4, #20002c);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #cbb4d4, #20002c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #d6c0db3b, #20002c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     min-height: 100vh;  
     display: flex;
-    flex-direction: column;  
+    flex-direction: column; 
+
 }
 
 /* Navbar Component */
-.logo_text {
+/* .logo_text {
     @apply max-sm:hidden font-satoshi font-semibold text-lg text-black tracking-wide;
-  } 
+  }  */
+
+
+  .gradient-text {
+    background: -webkit-linear-gradient(to right, #e0dfe4, #100015);  /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(to right, #e0dfe4, #100015);  /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(to right, #e0dfe4, #100015);  /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #f5f4fc, #724a7e);  /* Standard syntax */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+
   

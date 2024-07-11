@@ -5,9 +5,7 @@ import React, { useEffect, useState } from 'react'
 
 
 const AiPage = () => {
-
   const [filteredPost , setFilteredPost] = useState ([]);
-
   useEffect(() => {
     const fetchthePosts = async()=> { 
       try {

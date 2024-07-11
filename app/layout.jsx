@@ -2,6 +2,7 @@ import Navbar from '@components/Navbar';
 import '@styles/globals.css';
 import '@components/Provider'
 import Provider from '@components/Provider';
+import Footer from '@components/Footer';
 
 export const metadata = {
     title : "Web Sailor",
@@ -17,9 +18,10 @@ const RootLayout = ({children}) => {
         </head>
         <body>
             <Provider>
-                <main className='gradient'>
+                <main className='gradient '>
                     <Navbar/>
                     {children}
+                    <Footer/>
                 </main>
             </Provider>
         </body>

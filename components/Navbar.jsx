@@ -20,7 +20,7 @@ const Navbar = () => {
     },[])
 
     return (
-        <nav className='flex justify-between items-center pt-[30px] p-[5%]'>
+        <nav className='flex justify-between items-center pt-[30px] p-[5%] pb-0 '>
             <Link href="/">
                 <div className='flex justify-between items-center gap-4'>
                     <Image
@@ -29,7 +29,7 @@ const Navbar = () => {
                         height={50}
                         alt='Web Sailor Logo'
                     />
-                    <p className='max-sm:hidden white text-4xl font-medium'>Web Sailor</p>
+                    <p className='max-sm:hidden gradient-text text-4xl font-bold'>WebSailor</p>
                 </div>
             </Link>
             <ul className='font-medium white text-xl'>
