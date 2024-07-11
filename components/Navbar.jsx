@@ -24,7 +24,7 @@ const Navbar = () => {
             <Link href="/">
                 <div className='flex justify-between items-center gap-4'>
                     <Image
-                        src="assets/images/sailor.svg"
+                        src="/assets/images/sailor.svg"
                         width={50}
                         height={50}
                         alt='Web Sailor Logo'
@@ -46,8 +46,8 @@ const Navbar = () => {
                 <div className="dropdown dropdown-bottom dropdown-end mr-4">
                   <div tabIndex={0} role="button" className=" m-1">Sail</div>
                   <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-64  p-2 shadow">
-                    <li><a>Blockchain</a></li>
-                    <li><a>Artificial Intelligence</a></li>
+                    <li><Link href='/domains/blockchain'>Blockchain</Link></li>
+                    <li><Link href='/domains/ai'>Artificial Intelligence</Link></li>
                   </ul>
                 </div>
                 {session?.user ?(
