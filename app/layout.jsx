@@ -3,7 +3,7 @@ import '@styles/globals.css';
 import '@components/Provider'
 import Provider from '@components/Provider';
 import Footer from '@components/Footer';
-
+import { AuthProvider } from './context/AuthContext';
 export const metadata = {
     title : "Web Sailor",
     description : "Ocean of Websites"
@@ -17,6 +17,7 @@ const RootLayout = ({children}) => {
             <link rel="icon" href="/assets/images/sailor.svg" />
         </head>
         <body>
+        <AuthProvider>
             <Provider>
                 <main className='gradient '>
                     <Navbar/>
@@ -24,6 +25,8 @@ const RootLayout = ({children}) => {
                     <Footer/>
                 </main>
             </Provider>
+        </AuthProvider>
+ 
         </body>
     </html>
 )
