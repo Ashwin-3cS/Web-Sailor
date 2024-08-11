@@ -11,15 +11,15 @@ const IpfsStorage = () => {
     const [text, setText] = useState('');
     const [hash, setHash] = useState('');
     const [filename, setFilename] = useState('');
-
+    const [fileType, setFileType] = useState('');
 
     console.log('userId:', userId);
-
 
     const handleFileChange = (event) => {
         const selectedFile = event.target.files[0];
         setFile(selectedFile);
         setFilename(selectedFile.name);
+        setFileType(selectedFile.type.includes('video') ? 'video' : 'image');
     };
 
     const handleTextChange = (event) => {
@@ -33,25 +33,26 @@ const IpfsStorage = () => {
             // Upload file to IPFS
             if (file) {
                 response = await pinFileToIPFS(file);
-                setFilename(file.name);  // Set filename from file input
+                console.log('File upload response:', response);
+                setFilename(file.name);
             }
 
             // Upload text to IPFS
             if (text) {
                 response = await pinJSONToIPFS({ text });
+                console.log('JSON upload response:', response);
             }
 
             const ipfsHash = response.IpfsHash;
             setHash(ipfsHash);
 
-            // Ensure all fields are set
             const postData = {
                 creator: userId,
                 postContent: text || filename,
                 posthash: ipfsHash,
+                fileType: fileType
             };
 
-            // Validate fields before sending request
             if (!postData.creator || !postData.postContent || !postData.posthash) {
                 console.error('Missing required fields:', postData);
                 return;
